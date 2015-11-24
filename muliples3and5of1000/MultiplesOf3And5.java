@@ -5,7 +5,6 @@ import java.util.HashSet;
 public class MultiplesOf3And5 {
 
 	public static void main(String[] args) {
-		int result = 0;
 		System.out.println(getSumOfMuliples(3, 5, 1000));
 	}
 

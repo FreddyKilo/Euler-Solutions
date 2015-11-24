@@ -23,9 +23,14 @@ public class LargestPrimeFactor {
 	}
 	
 	public static boolean isPrime(long number) {
-		for(int i=2; i <= number/2; i++){
+		if (number % 2 == 0) {
+			return false;
+		}
+		int count = 0;
+		for(int i=3; i * i <= number; i+=2){
+			count++;
 			if(number % i == 0){
-				System.out.println("and isPrime took " + i + " iterations to return that number as false");
+				System.out.println("and isPrime took " + count + " iterations to return that number as false");
 				System.out.println("");
 				return false;
 			}
